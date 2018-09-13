@@ -1,0 +1,58 @@
+camera
+{
+	pos = { 0, 0, 0 }
+	rot = { -5, 0, 0 }
+	fov = 60
+	gamma = 0.91
+}
+light
+{
+	pos = { 0, 5, 5 }
+	color = 0xFFFFFF
+	intensity = 1.0
+}
+object
+{
+	type = sphere
+	pos = { 0, 1, 10 }
+	scale = 1.0
+	material
+	{
+		color = 0xC8233E
+		ambient = 0.075
+		diffuse = 0.925
+		specular = 50.0
+		shininess = 1024
+		reflective = 1.0
+	}
+}
+object
+{
+	type = sphere
+	pos = { 2, 1, 10 }
+	scale = 1.0
+	material
+	{
+		color = 0x00FF00
+		ambient = 0.075
+		diffuse = 0.925
+		specular = 50.0
+		shininess = 1024
+		reflective = 0.25
+	}
+}
+object
+{
+	type = sphere
+	pos = { -2, 1, 10 }
+	scale = 1.0
+	material
+	{
+		color = 0xFC4A3F
+		ambient = 0.075
+		diffuse = 0.925
+		specular = 50.0
+		shininess = 1024
+		reflective = 0
+	}
+}
