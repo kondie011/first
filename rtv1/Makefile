@@ -6,7 +6,7 @@
 #    By: knedzing <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/08/05 10:58:35 by knedzing          #+#    #+#              #
-#    Updated: 2018/09/07 10:52:40 by knedzing         ###   ########.fr        #
+#    Updated: 2018/09/14 11:34:04 by knedzing         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,8 +18,10 @@ SRC = main.c \
 	  cross.c \
 	  get_scene.c \
 	  ray_trace.c \
+	  ray_trace2.c \
 	  ray_intersect.c \
-	  propaties.c
+	  propaties.c \
+	  get_lyt_and_obj.c
 
 OBJ = $(SRC:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: knedzing <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/07 10:52:15 by knedzing          #+#    #+#             */
-/*   Updated: 2018/09/13 12:08:35 by knedzing         ###   ########.fr       */
+/*   Updated: 2018/09/15 13:13:21 by knedzing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ void	set_shadows(t_mlx *mlx, t_obj *obj, double *t, double *min)
 		mlx->shadow = 0.5;
 }
 
-void    set_normal(t_mlx *mlx, t_obj *obj)
+void	set_normal(t_mlx *mlx, t_obj *obj)
 {
-	if (ft_strequ(obj->type,"plane"))
+	if (ft_strequ(obj->type, "plane"))
 		obj->normal = vec3_sub(obj->pos, obj->dir);
 	else if (ft_strequ(obj->type, "sphere"))
 		obj->normal = vec3_sub(obj->pos, mlx->ray->hit);
-	else if (ft_strequ(obj->type,"cylinder") || ft_strequ(obj->type, "cone"))
+	else if (ft_strequ(obj->type, "cylinder") || ft_strequ(obj->type, "cone"))
 		obj->normal = vec3(obj->pos.x - mlx->ray->hit.x, 0.0,
 				obj->pos.z - mlx->ray->hit.z);
 	vec3_normalize(&obj->normal);

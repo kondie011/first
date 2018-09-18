@@ -6,7 +6,7 @@
 /*   By: knedzing <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 12:12:48 by knedzing          #+#    #+#             */
-/*   Updated: 2018/09/06 15:13:56 by knedzing         ###   ########.fr       */
+/*   Updated: 2018/09/14 13:49:46 by knedzing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@
 # define DEG2RAD PI / 180
 # define RAD2DEG 180 / PI
 
-enum { X, Y, Z };
-
 typedef struct		s_list
 {
 	void			*content;
@@ -32,24 +30,15 @@ typedef struct		s_list
 }					t_list;
 typedef struct		s_vec3
 {
-    double	x;
-    double	y;
-    double	z;
+	double	x;
+	double	y;
+	double	z;
 }					t_vec3;
-
-typedef struct		s_vec3i
-{
-    int	x;
-    int	y;
-    int	z;
-}					t_vec3i;
-
 t_vec3				vec3_zero(void);
 t_vec3				vec3_up(void);
 t_vec3				vec3_right(void);
 t_vec3				vec3_forward(void);
 t_vec3				vec3(double x, double y, double z);
-t_vec3i				vec3i(t_vec3 v);
 t_vec3				vec3_add(t_vec3 va, t_vec3 vb);
 t_vec3				vec3_sub(t_vec3 va, t_vec3 vb);
 t_vec3				vec3_mul(t_vec3 va, t_vec3 vb);
@@ -57,7 +46,6 @@ t_vec3				vec3_fmul(t_vec3 v, double m);
 double				vec3_dot(t_vec3 va, t_vec3 vb);
 void				vec3_rot(t_vec3 *v, int axis, double theta);
 void				vec3_clamp(t_vec3 *v, double min, double max);
-void				vec3_rotate(t_vec3 *v, t_vec3 r);
 t_vec3				vec3_cross(t_vec3 va, t_vec3 vb);
 t_vec3				vec3_norm(t_vec3 v);
 t_vec3				vec3_reflect(t_vec3 v, t_vec3 n);

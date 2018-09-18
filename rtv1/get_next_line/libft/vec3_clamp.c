@@ -6,7 +6,7 @@
 /*   By: knedzing <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/03 18:51:53 by knedzing          #+#    #+#             */
-/*   Updated: 2018/09/13 08:32:29 by knedzing         ###   ########.fr       */
+/*   Updated: 2018/09/14 10:32:12 by knedzing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	vec3_clamp(t_vec3 *v, double min, double max)
 {
 	if (v->x > max)
-	   	v->x = max;
+		v->x = max;
 	if (v->y > max)
 		v->y = max;
 	if (v->z > max)
